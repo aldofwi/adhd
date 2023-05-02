@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react'
+import a_fb from '../assets/A_FB.jpg'
 import logoA from '../assets/logoA_trans.png'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles';
@@ -8,6 +9,8 @@ import Link from 'next/link';
 type Props = {}
 
 function Hero({}: Props) {
+
+    // https://scontent-mia3-1.xx.fbcdn.net/v/t31.18172-8/334883_110145272426521_1364936393_o.jpg?_nc_cat=101&ccb=1-7&_nc_sid=de6eea&_nc_ohc=9h34NjUHRV0AX8oIPQl&_nc_ht=scontent-mia3-1.xx&oh=00_AfBaxBhBbNq0MaEzyD8fYjJCmvc_U-FCv45zFAY2atWbYQ&oe=6478FBA3
 
     const [text, count] = useTypewriter({
         words: [
@@ -25,7 +28,7 @@ function Hero({}: Props) {
         <BackgroundCircles />
         <Image 
             className='relative rounded-full h-32 w-32 mx-auto object-cover'
-            src={logoA}
+            src={a_fb}
             alt="logoA" />
         <div className='z-20'>
             <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>Software Engineer</h2>
