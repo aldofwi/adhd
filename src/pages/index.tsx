@@ -1,18 +1,23 @@
 
 import Header from '@/components/Header';
+import Hero from '@/components/Hero';
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
 const Home: NextPage = () => {
+  
   return (
 
-      <div>
-        <Head><title>My Portfolio</title></Head>
+      <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0">
 
-        {/* Header */}
+        <Head><title>ADHD</title></Head>
+
         <Header />
 
         {/* Hero */}
+        <section id='hero' className='snap-center'>
+          <Hero />
+        </section>
 
         {/* About */}
 
@@ -26,7 +31,7 @@ const Home: NextPage = () => {
 
        
       </div>
-  )
-}
+  );
+};
 
 export default Home;
