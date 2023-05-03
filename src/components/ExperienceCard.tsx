@@ -9,8 +9,9 @@ function ExperienceCard({}: Props) {
 
   return (
 
-    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center 
-    bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'>
+    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 
+    w-[500px] md:w-[600px] xl:w-[900px] pt-55 snap-center bg-[#292929] p-10 hover:opacity-100 
+    opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'> 
         <motion.img 
             initial={{
                 y: -100,
@@ -28,17 +29,17 @@ function ExperienceCard({}: Props) {
             <p className='font-bold text-2xl mt-1'>ADHD</p>
             <div className='flex space-x-2 my-2'>
                 <img className='h-10 w-10 rounded-full' src="https://raw.githubusercontent.com/github/explore/5b3600551e122a3277c2c5368af2ad5725ffa9a1/topics/java/java.png" alt="" />
-                <img className='h-10 w-10 rounded-full' src="https://raw.githubusercontent.com/github/explore/5b3600551e122a3277c2c5368af2ad5725ffa9a1/topics/java/java.png" alt="" />
+                <img className='h-10 w-10 rounded-full' src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" alt="" />
                 <img className='h-10 w-10 rounded-full' src="https://raw.githubusercontent.com/github/explore/5b3600551e122a3277c2c5368af2ad5725ffa9a1/topics/java/java.png" alt="" />
             </div>
             <p className='uppercase py-5 text-gray-300'>Started work ... - Ended ... </p>
 
             <ul className='list-disc space-y-4 ml-5 text-lg'>
-                <li>Summary points Summary points Summary points Summary points Summary points Summary points</li>
-                <li>Summary points Summary points Summary points Summary points Summary points Summary points</li>
-                <li>Summary points Summary points Summary points Summary points Summary points Summary points</li>
-                <li>Summary points Summary points Summary points Summary points Summary points Summary points</li>
-                <li>Summary points Summary points Summary points Summary points Summary points Summary points</li>
+                <li>Summary points Summary points Summary points Summary points Summary points</li>
+                <li>Summary points Summary points Summary points Summary points Summary points</li>
+                <li>Summary points Summary points Summary points Summary points Summary points</li>
+                <li>Summary points Summary points Summary points Summary points Summary points</li>
+                <li>Summary points Summary points Summary points Summary points Summary points</li>
             </ul>
         </div>
     </article>
