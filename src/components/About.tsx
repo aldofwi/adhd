@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import logoA from '../assets/logoA_trans.png'
 
 type Props = {}
 
