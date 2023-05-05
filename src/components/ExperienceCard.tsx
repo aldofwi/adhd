@@ -2,10 +2,14 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import logoA from '../assets/logoA_trans.png'
 import Image from 'next/image'
+import { Experience } from '../../typings'
+import { urlFor } from '../../sanity'
 
-type Props = {}
+type Props = {
+    experience: Experience
+}
 
-function ExperienceCard({}: Props) {
+function ExperienceCard({ experience }: Props) {
 
   return (
 
@@ -20,26 +24,37 @@ function ExperienceCard({}: Props) {
             transition={{ duration: 1.2 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            src="https://avatars.githubusercontent.com/u/42814580?s=400&u=af24853f7c5f08390e4f0f0437239f46e3326aea&v=4"
+            src={urlFor(experience?.companyImage).url()}
             className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
             alt=""
         />
         <div className='px-0 md:px-10'>
-            <h4 className='text-4xl font-light'>CEO of ADHD</h4>
-            <p className='font-bold text-2xl mt-1'>ADHD</p>
+            <h4 className='text-4xl font-light'>{experience.jobTitle}</h4>
+            <p className='font-bold text-2xl mt-1'>{experience.company}</p>
             <div className='flex space-x-2 my-2'>
-                <img className='h-10 w-10 rounded-full' src="https://raw.githubusercontent.com/github/explore/5b3600551e122a3277c2c5368af2ad5725ffa9a1/topics/java/java.png" alt="" />
-                <img className='h-10 w-10 rounded-full' src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" alt="" />
-                <img className='h-10 w-10 rounded-full' src="https://raw.githubusercontent.com/github/explore/5b3600551e122a3277c2c5368af2ad5725ffa9a1/topics/java/java.png" alt="" />
+                {
+                    experience.technologies.map((technology) => (
+                        <img 
+                            key={technology._id}
+                            className='h-10 w-10 rounded-full' 
+                            src={urlFor(technology.image).url()}
+                            alt="" />
+                    ))        
+                    
+                }
             </div>
-            <p className='uppercase py-5 text-gray-300'>Started work ... - Ended ... </p>
+            <p className='uppercase py-5 text-gray-300'>
+                {new Date(experience.dateStarted).toDateString()} - {" "}
+                {experience.isCurrentlyWorkingHere ? "Present"
+                    : new Date(experience.dateEnded).toDateString()
+                }
+            </p>
 
-            <ul className='list-disc space-y-4 ml-5 text-lg'>
-                <li>Summary points Summary points Summary points Summary points Summary points</li>
-                <li>Summary points Summary points Summary points Summary points Summary points</li>
-                <li>Summary points Summary points Summary points Summary points Summary points</li>
-                <li>Summary points Summary points Summary points Summary points Summary points</li>
-                <li>Summary points Summary points Summary points Summary points Summary points</li>
+            <ul className='list-disc space-y-4 ml-5 text-lg h-96 pr-10 overflow-y-scroll'>
+                {experience.points.map((point, i) => (
+                    <li key={i}>{point}</li>
+                ))}
+
             </ul>
         </div>
     </article>
