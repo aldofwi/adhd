@@ -15,7 +15,7 @@
 
 ## Description 📝
 
-This is a [Typescript](https://www.typescriptlang.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Typescript](https://www.typescriptlang.org/) project bootstrapped with [`Tailwind-CSS`](https://tailwindcss.com/).
 
 The project was generated with :
 ⚛️ [Create Next App](https://github.com/vercel/next.js)
