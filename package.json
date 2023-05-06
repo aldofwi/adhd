@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.21.5",
     "@heroicons/react": "^2.0.17",
     "@portabletext/react": "^3.0.0",
     "@sanity/image-url": "^1.0.2",

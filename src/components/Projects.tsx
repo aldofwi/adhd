@@ -1,5 +1,5 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Project } from '../../typings';
 import { urlFor } from '../../sanity';
 
@@ -14,9 +14,9 @@ function Projects({ projects }: Props) {
   return (
 
     <motion.div 
-        initial={{ opacity: 0 }}
+        initial=    {{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
+        transition= {{ duration: 1.5 }}
         className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
         <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
             Projects
@@ -26,7 +26,7 @@ function Projects({ projects }: Props) {
         snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
             
             {projects.map((project, index) => (
-                <div key={index} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
+                <div key={project._id} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
                     <motion.img 
                         initial={{
                             y: -300,
