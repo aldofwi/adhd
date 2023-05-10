@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Project } from '../../typings';
 import { urlFor } from '../../sanity';
+import Link from 'next/link';
 
 type Props = {
     projects: Project[]
@@ -28,7 +29,7 @@ function Projects({ projects }: Props) {
             {projects.map((project, index) => (
                 <div 
                     key={project._id} 
-                    className="max-h-6xl max-w-6xl flex-shrink-0 snap-center flex flex-col 
+                    className="max-h-3xl max-w-3xl flex-shrink-0 snap-center flex flex-col 
                         space-y-5 items-center justify-center p-20 md:p-44">
                     <motion.img
                         initial={{
@@ -42,10 +43,16 @@ function Projects({ projects }: Props) {
                     
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
                         <h4 className='text-4xl font-semibold text-center'>
-                            <span className='underline decoration-[#F7AB0A]/50'>
+                            <span>
                                 Case Study {index+1} of {projects.length}: 
                             </span> {" "}
-                            {project?.title}
+
+                            <span 
+                                className='underline decoration-[#F7AB0A]/50'
+                                onClick={() => (window.location.href = project?.linkToBuild)}>
+                                    {project?.title}
+                            </span>
+                            
                         </h4>
 
                         <div className='flex items-center space-x-2 justify-center'>
