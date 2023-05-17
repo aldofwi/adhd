@@ -41,8 +41,8 @@ function Projects({ projects }: Props) {
                         viewport={{ once: true }}
                         src={urlFor(project?.image).url()} alt="" />
                     
-                    <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-                        <h4 className='text-4xl font-semibold text-center'>
+                    <div className='space-y-10 px-0 md:px-10 max-w-4xl'>
+                        <h4 className='text-3xl font-semibold text-center'>
                             <span>
                                 Case Study {index+1} of {projects.length}: 
                             </span> {" "}
