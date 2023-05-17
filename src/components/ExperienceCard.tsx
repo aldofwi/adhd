@@ -13,8 +13,8 @@ function ExperienceCard({ experience }: Props) {
 
   return (
 
-    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 
-    h-min w-min md:w-[400px] xl:w-[600px] pt-40 snap-center bg-[#292929] p-10 hover:opacity-100 
+    <article className='flex flex-col rounded-lg items-center space-y-2 flex-shrink-0 
+    h-min w-min md:w-[400px] xl:w-[500px] pt-20 snap-center bg-[#292929] p-10 hover:opacity-100 
     opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'> 
         <motion.img 
             initial={{
@@ -25,7 +25,7 @@ function ExperienceCard({ experience }: Props) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             src={urlFor(experience?.companyImage).url()}
-            className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+            className="w-22 h-22 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"
             alt=""
         />
         <div className='px-0 md:px-10 h-min'>
@@ -50,7 +50,7 @@ function ExperienceCard({ experience }: Props) {
                 }
             </p>
 
-            <ul className='list-disc space-y-4 ml-5 text-lg h-96 pr-10 overflow-y-scroll'>
+            <ul className='list-disc space-y-2 ml-5 text-lg h-52 pr-10 overflow-y-scroll'>
                 {experience.points.map((point, i) => (
                     <li key={i}>{point}</li>
                 ))}
