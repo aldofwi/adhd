@@ -63,7 +63,7 @@ const Home = ({
         </section>
 
         <section id='contact' className='snap-start'>
-          <ContactMe />
+          <ContactMe pageInfo={pageInfo} />
         </section>
 
         <Link href='#hero'>
