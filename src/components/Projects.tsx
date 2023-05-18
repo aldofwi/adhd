@@ -29,8 +29,8 @@ function Projects({ projects }: Props) {
             {projects.map((project, index) => (
                 <div 
                     key={project._id} 
-                    className="max-h-3xl max-w-3xl flex-shrink-0 snap-center flex flex-col 
-                        space-y-5 items-center justify-center p-20 md:p-44">
+                    className="max-h-2xl max-w-2xl flex-shrink-0 snap-center flex flex-col 
+                        space-y-5 items-center justify-center p-1 md:p-20">
                     <motion.img
                         initial={{
                             y: -300,
@@ -39,10 +39,12 @@ function Projects({ projects }: Props) {
                         transition={{ duration: 1.2 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        src={urlFor(project?.image).url()} alt="" />
+                        src={urlFor(project?.image).url()} alt=""
+                        className="h-min w-min relative p-6 flex-col"
+                        />
                     
                     <div className='space-y-10 px-0 md:px-10 max-w-4xl'>
-                        <h4 className='text-3xl font-semibold text-center'>
+                        <h4 className='text-2xl font-semibold text-center'>
                             <span>
                                 Project N°{index+1} of {projects.length}: 
                             </span> {" "}

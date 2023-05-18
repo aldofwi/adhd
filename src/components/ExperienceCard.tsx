@@ -14,7 +14,7 @@ function ExperienceCard({ experience }: Props) {
   return (
 
     <article className='flex flex-col rounded-lg items-center space-y-2 flex-shrink-0 
-    h-min w-min md:w-[400px] xl:w-[500px] pt-20 snap-center bg-[#292929] p-10 hover:opacity-100 
+    h-min w-min md:w-[150px] xl:w-[200px] pt-10 snap-center bg-[#292929] p-5 hover:opacity-100 
     opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'> 
         <motion.img 
             initial={{
@@ -25,7 +25,7 @@ function ExperienceCard({ experience }: Props) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             src={urlFor(experience?.companyImage).url()}
-            className="w-22 h-22 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"
+            className="w-min h-min rounded-full xl:w-[100px] xl:h-[100px] object-cover object-center"
             alt=""
         />
         <div className='px-0 md:px-10 h-min'>
