@@ -36,7 +36,7 @@ function ContactMe({ pageInfo }: Props) {
             <h4 className="text-2xl font-semibold text-center">
                 I have got just what you need.{"   "}
                 <span className='decoration-[#F7AB0A]/50 underline'>
-                    Let us talk.
+                    Let's talk.
                 </span>
             </h4>
 
