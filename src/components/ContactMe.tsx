@@ -34,7 +34,7 @@ function ContactMe({ pageInfo }: Props) {
         
         <div className="absolute flex flex-col h-3/5 w-4/5 space-y-10 items-center">
             <h4 className="text-2xl font-semibold text-center">
-                I have got just what you need.{"   "}
+                I've got just what you need.{"   "}
                 <span className='decoration-[#F7AB0A]/50 underline'>
                     Let's talk.
                 </span>
